@@ -1,0 +1,8 @@
+CREATE TABLE cart (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,  
+    clothing_id INT REFERENCES clothing(id) ON DELETE CASCADE,
+    quantity INT NOT NULL,
+    added_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+

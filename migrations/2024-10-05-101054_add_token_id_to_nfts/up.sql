@@ -1,0 +1,2 @@
+ALTER TABLE nfts ADD COLUMN token_id VARCHAR;
+

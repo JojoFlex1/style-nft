@@ -1,0 +1,8 @@
+CREATE TABLE nfts (
+    id SERIAL PRIMARY KEY,
+    clothing_id INT REFERENCES clothing(id) ON DELETE CASCADE,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    nft_url VARCHAR NOT NULL,  
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
